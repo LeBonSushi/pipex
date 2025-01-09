@@ -11,13 +11,11 @@ LIBC =  ft_atoi.c	ft_bzero.c	ft_isalnum.c	ft_isalpha.c\
         ft_memcmp.c	ft_memcpy.c	ft_memmove.c	ft_memset.c\
         ft_strchr.c	ft_strdup.c	ft_strlcat.c	ft_strlcpy.c\
         ft_strlen.c	ft_strncmp.c	ft_strnstr.c	ft_strrchr.c\
-        ft_tolower.c	ft_toupper.c	ft_calloc.c
-
-BONUS = ft_endl.c              ft_get_next_line.c\
+        ft_tolower.c	ft_toupper.c	ft_calloc.c\
+		ft_endl.c              get_next_line.c\
 		ft_print_hex.c			ft_print_ptr.c		ft_print_unsigned.c ft_print_utils.c ft_printf.c\
 
 SRCS = ${LIBC} ${ADDI}
-SRCS_BONUS = ${SRCS} ${BONUS}
 
 OBJS = ${SRCS:.c=.o}
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
@@ -26,9 +24,6 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 		ar rcs ${NAME} ${OBJS}
-
-bonus: ${OBJS_BONUS}
-		ar rcs ${NAME} ${OBJS_BONUS}
 
 .c.o:
 		${COMP} ${CFLAGS} -c $< -o $@
@@ -40,7 +35,5 @@ fclean: clean
 		rm -rf ${NAME}
 
 re: fclean all
-
-rebonus: fclean bonus
 
 .PHONY: all clean fclean re rebonus

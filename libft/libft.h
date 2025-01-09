@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macorso <maxence22corso@gmail.com>         +#+  +:+       +#+        */
+/*   By: macorso <macorso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:23:39 by macorso           #+#    #+#             */
-/*   Updated: 2025/01/07 22:14:29 by macorso          ###   ########.fr       */
+/*   Updated: 2025/01/08 03:44:14 by macorso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,10 @@ void	ft_putnbr_fd(int n, int fd);
 
 int		ft_endl(char *str);
 
-char	*extract_line(char *buffer);
-char	*trim_buffer(char *buffer);
-char	*read_and_append(int fd, char *buffer);
+
+char	*ft_next(char *buffer);
+char	*ft_line(char *buffer);
+char	*read_file(int fd, char *res);
 char	*get_next_line(int fd);
 
 int		ft_print_unsigned(unsigned int num);
@@ -79,5 +80,6 @@ int		ft_printchar(int c);
 int		ft_printstr(char *str);
 int		ft_printnbr(int nb);
 int		ft_printpercent(void);
+int		ft_printf(const char *format, ...);
 
 #endif

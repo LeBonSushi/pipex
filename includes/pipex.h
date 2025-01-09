@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macorso <maxence22corso@gmail.com>         +#+  +:+       +#+        */
+/*   By: macorso <macorso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 22:18:31 by macorso           #+#    #+#             */
-/*   Updated: 2025/01/07 22:52:17 by macorso          ###   ########.fr       */
+/*   Updated: 2025/01/09 15:20:49 by macorso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 
 # define PIPEX_H
+
+# define HERE_DOC ".here_doc_tmp"
 
 # include "../libft/libft.h"
 
@@ -26,9 +28,9 @@
 
 typedef struct	s_cmd
 {
-	char		*cmd_path;
-	char		**args;
-	pid_t		pid;
+	char			*cmd_path;
+	char			**args;
+	pid_t			pid;
 	struct s_cmd	*next;
 }			t_cmd;
 

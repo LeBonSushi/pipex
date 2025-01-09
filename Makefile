@@ -1,5 +1,5 @@
 CC = cc 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 NAME = pipex
 INCLUDES = -I includes/
 
@@ -12,7 +12,7 @@ OBJ = ${SRC:.c=.o}
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(LIBFT)
 	@$(CC) $(CFLAGS) $(INCLUDES) $(SRC) $(LIBFT) -o $(NAME)
 
 $(LIBFT):
