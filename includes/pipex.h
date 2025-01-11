@@ -6,7 +6,7 @@
 /*   By: macorso <macorso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 22:18:31 by macorso           #+#    #+#             */
-/*   Updated: 2025/01/09 15:20:49 by macorso          ###   ########.fr       */
+/*   Updated: 2025/01/10 01:27:27 by macorso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct	s_pipex
 	int		outfile_fd;
 	char	*limiter;
 	int		status;
+	int		cmd_nb;
 	t_cmd	*cmd_list;
 }			t_pipex;
 
